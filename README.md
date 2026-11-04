@@ -1,4 +1,4 @@
-\# Numerical Methods for ODEs (MATLAB)
+# Numerical Methods for ODEs (MATLAB)
 
 
 
@@ -8,7 +8,7 @@ ordinary differential equations, each verified by a convergence-order test.
 
 
 
-\## Methods
+## Methods
 
 
 
@@ -30,7 +30,7 @@ ordinary differential equations, each verified by a convergence-order test.
 
 
 
-\## Usage
+## Usage
 
 
 
@@ -52,7 +52,7 @@ Run `problems/mispracticas.m` to select a sample problem and plot it.
 
 
 
-\## Verification
+## Verification
 
 
 
@@ -60,9 +60,17 @@ Scripts in `tests/` check each method against exact solutions and report the
 
 observed convergence order, e.g. halving the step size divides the RK4 error by \~16.
 
+| Script | What it checks |
+|---|---|
+| `test_metodos` | Convergence order of Euler, Heun, trapezoidal, RK4, AB4, Milne, AB4-AM3, Milne-Simpson |
+| `test_mirkf45` | Adaptive RKF45: final error and rejected steps |
+| `test_midisplin` | Shooting method, Dirichlet conditions |
+| `test_graficadisparo` | Shooting method with derivative condition, plus plots |
+| `test_jacobianos` | Analytic Jacobians against finite differences |
+| `test_miecdiferencias` | Second-order recurrence against exact solution |
 
 
-\## Notes
+## Notes
 
 Milne's method is only weakly stable, so it can behave poorly on long intervals.
 
